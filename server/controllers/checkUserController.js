@@ -11,7 +11,7 @@ const checkUser = async (req, res) => {
             // if no such user is found then create new one with given data
             const newUser = await UserModel.create({ ...req.body });
             console.log('created new user : ', newUser);
-            const sampleImage = "https://firebasestorage.googleapis.com/v0/b/picpad-c4947.appspot.com/o/ancient-manuscript.jpg?alt=media&token=0a5219c7-f0c0-454e-aacc-7ea68d4acc20";
+            const sampleImage = "https://res.cloudinary.com/datowd0cc/image/upload/v1707477068/TurboShareX/eu4jxqbtpn28stunwc7o.png";
             // add sample image to user's images list
             const images = await ImagesModel.findOneAndUpdate(
                 { username: newUser.username },
